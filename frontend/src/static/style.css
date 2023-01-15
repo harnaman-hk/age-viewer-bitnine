@@ -69,7 +69,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     /* padding-top: 90px; */
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 
@@ -79,6 +79,7 @@ body {
     width: 100%;
     align-items: stretch;
     position: relative;
+    height: 100%;
     max-height: calc(100% - 105px);
     overflow-y: scroll ;
 }
@@ -89,8 +90,9 @@ body {
     width: 100%;
     align-items: stretch;
     position: relative;
+    height: 100%;
     max-height: calc(100% - 300px);
-    overflow-y: scroll ;
+    overflow: auto;
 }
 /* ---------------------------------------------------
     DEFAULT TEMPLATE STYLE
@@ -101,6 +103,14 @@ body {
     height: 100vh;
 }
 
+.display-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.display-box > div{
+    flex: 1;
+}
 /* ---------------------------------------------------
     SCROLL BAR STYLE
 ----------------------------------------------------- */
@@ -201,7 +211,7 @@ a[data-toggle="collapse"] {
     right: 0;
     z-index: 0;
     padding: 20px 15px 0 15px;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .editor {

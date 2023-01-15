@@ -25,6 +25,9 @@ import Sidebar from '../../sidebar/containers/Sidebar';
 import Contents from '../../contents/containers/Contents';
 import Modal from '../../modal/containers/Modal';
 import { loadFromCookie, saveToCookie } from '../../../features/cookie/CookieUtil';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const DefaultTemplate = ({
   theme,
@@ -76,6 +79,7 @@ const DefaultTemplate = ({
 
   return (
     <div className="default-template">
+       <h2 className="text-center p-2"> AGEViewer </h2>
       { isOpen && <Modal /> }
       <input
         type="radio"
@@ -93,14 +97,19 @@ const DefaultTemplate = ({
         checked={theme === 'dark'}
         readOnly
       />
-      <div className="editor-divison">
-        <EditorContainer />
-        <Sidebar />
-      </div>
-      <div className="wrapper-extension-padding" id="wrapper">
-        <Contents />
-      </div>
-
+      <Container fluid={true} className="p-0">
+        <Row style={{ backgroundColor: 'lightblue' }}>
+         <div className="editor-divison">
+          <EditorContainer />
+          <Sidebar />
+         </div>
+        </Row>
+        <Row style={{ backgroundColor: 'red' }} className="vertical-scrollable">
+                  <div className="wrapper-extension-padding" id="wrapper">
+                    <Contents />
+                  </div>
+        </Row>
+      </Container>
     </div>
   );
 };
