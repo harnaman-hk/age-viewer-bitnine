@@ -12,3 +12,10 @@ Linux Ubuntu 20.04
 
 
 ### Visual Comparison
+#### After
+
+<img src="./images/after.png" alt="drawing" width="600" height="300">
+
+#### Before
+
+<img src="./images/before.png" alt="drawing" width="600" height="300">
